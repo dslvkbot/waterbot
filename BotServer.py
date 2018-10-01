@@ -1,5 +1,5 @@
-import Order
-import json
+from GUIClasses import Order
+from KeyboardClasses import Button, KeyboardConstructor
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 
@@ -47,44 +47,12 @@ class VkBot:
             else:
                 self.message_help(message)
 
-    """def make_positive_keyboard(self, message):
-        keyboard = json.dumps(
-            {'one_time': True,
-             'buttons':
-                 [[{'action': {
-                     'type': 'text',
-                     'label': 'makegame'
-                 },
-                     'color': 'positive'
-                 }],
-                     [{'action': {
-                         'type': 'text',
-                         'label': 'deletegame'
-                     },
-                         'color': 'negative'
-                     }]]})
-        keyboard = keyboard.replace('makegame', message)
-        return keyboard"""
-
     def message_help(self, message):
-        keyboard = json.dumps(
-            {'one_time': True,
-             'buttons':
-                 [
-                     [{'action': {
-                         'type': 'text',
-                         'label': 'makeorder'
-                     },
-                         'color': 'positive'
-                     }],
-                     [{'action': {
-                         'type': 'text',
-                         'label': 'deleteorder'
-                     },
-                         'color': 'negative'
-                     }]
-                 ]})
-        keyboard = keyboard.replace('makeorder', 'Создать заявку').replace('deleteorder', 'Удалить заявку')
+        makeorder_button = Button.Button('Создать заявку', 'positive')
+        deleteorder_button = Button.Button('Удалить заявку', 'negative')
+        button_list = [makeorder_button, deleteorder_button]
+        position = [1, 1]
+        keyboard = KeyboardConstructor.construct_keyboard(button_list, position)
         self.write_keyboard(message.user_id, 'Выберите один из вариантов.', keyboard)
 
     def message_make_order(self, message):
@@ -105,38 +73,13 @@ class VkBot:
         new_order = Order.Order(room=room, count=int(message.text))
         if int(message.text) > 0:
             self.orders.update({message.user_id: new_order})
-            keyboard = json.dumps(
-                {'one_time': True,
-                 'buttons':
-                     [
-                         [
-                             {'action': {
-                                 'type': 'text',
-                                 'label': '18:00'
-                             },
-                                 'color': 'default'
-                             },
-                             {'action': {
-                                 'type': 'text',
-                                 'label': '19:00'
-                             },
-                                 'color': 'default'
-                             }],
-                         [
-                             {'action': {
-                                 'type': 'text',
-                                 'label': '20:00'
-                             },
-                                 'color': 'default'
-                             },
-                             {'action': {
-                                 'type': 'text',
-                                 'label': '21:00'
-                             },
-                                 'color': 'default'
-                             }
-                         ]
-                     ]})
+            button_18 = Button.Button('18:00', 'default')
+            button_19 = Button.Button('19:00', 'default')
+            button_20 = Button.Button('20:00', 'default')
+            button_21 = Button.Button('21:00', 'default')
+            button_list = [button_18, button_19, button_20, button_21]
+            position = [2, 2]
+            keyboard = KeyboardConstructor.construct_keyboard(button_list, position)
             self.write_keyboard(message.user_id, 'Выберите удобное время.', keyboard)
         else:
             self.write_msg(message.user_id, 'Введите положительное число.')
@@ -148,22 +91,11 @@ class VkBot:
             order_enter_type = self.orders[message.user_id]
         order_enter_type.change_time(message.text)
         self.orders.update({message.user_id: order_enter_type})
-        keyboard = json.dumps(
-            {'one_time': True,
-             'buttons':
-                 [[{'action': {
-                     'type': 'text',
-                     'label': 'bankcard'
-                 },
-                     'color': 'positive'
-                 }],
-                     [{'action': {
-                         'type': 'text',
-                         'label': 'cash'
-                     },
-                         'color': 'negative'
-                     }]]})
-        keyboard = keyboard.replace('bankcard', 'Перевод на банковскую карту').replace('cash', 'Наличными')
+        button_bank = Button.Button('Перевод на банковскую карту', 'positive')
+        button_cash = Button.Button('Наличными', 'negative')
+        button_list = [button_bank, button_cash]
+        position = [1, 1]
+        keyboard = KeyboardConstructor.construct_keyboard(button_list, position)
         self.write_keyboard(message.user_id, 'Выберите способ оплаты.', keyboard)
 
     def message_order_registered(self, message):
@@ -173,7 +105,7 @@ class VkBot:
             self.orders.update({message.user_id: order})
             self.write_msg(message.user_id,
                            'Заказ на ' + str(5 * order.count) + ' литров воды в комнату ' + order.room +
-                           ' создан.\n' + message.text + '.')
+                           ' на ' + order.time + ' создан.\n' + message.text + '.')
             self.message_help(message)
 
     def message_delete_order(self, message):
@@ -192,7 +124,7 @@ class VkBot:
                     thisorder = self.orders[key]
                     self.write_msg(message.user_id,
                                    'Заказ в комнату ' + thisorder.room + ' на ' + str(5 * thisorder.count)
-                                   + ' литров воды в ' + thisorder.time + '.\n' + thisorder.type_of_payment)
+                                   + ' литров воды в ' + thisorder.time + '.\n' + thisorder.type_of_payment + '.')
                 except KeyError:
                     print('Undefined behaviour')
             if len(orderslist) == 0:
@@ -219,7 +151,6 @@ class VkBot:
                     print('группы', event.group_id)
 
                 print('Текст: ', event.text)
-                print()
 
             elif event.type == VkEventType.USER_TYPING:
                 print('Печатает ', end='')
