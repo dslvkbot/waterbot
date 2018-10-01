@@ -19,9 +19,12 @@ class VkBot:
         self.vk_session.method('messages.send', {'user_id': user_id, 'message': message, 'keyboard': keyboard})
 
     def get_last_msg_text(self, peer_id):
-        dictionary = self.vk_session.method('messages.getHistory', {'offset': 1, 'count': 1, 'peer_id': peer_id})
-        items = dictionary['items']
-        return items[0]['text']
+        try:
+            dictionary = self.vk_session.method('messages.getHistory', {'offset': 1, 'count': 1, 'peer_id': peer_id})
+            items = dictionary['items']
+            return items[0]['text']
+        except IndexError:
+            print('Fuck')
 
     def parse_message(self, message):
         if message.from_me:
@@ -137,38 +140,29 @@ class VkBot:
             if event.type == VkEventType.MESSAGE_NEW:
                 self.parse_message(event)
                 print('Новое сообщение:')
-
                 if event.from_me:
                     print('От меня для: ', end='')
                 elif event.to_me:
                     print('Для меня от: ', end='')
-
                 if event.from_user:
                     print(event.user_id)
                 elif event.from_chat:
                     print(event.user_id, 'в беседе', event.chat_id)
                 elif event.from_group:
                     print('группы', event.group_id)
-
                 print('Текст: ', event.text)
-
             elif event.type == VkEventType.USER_TYPING:
                 print('Печатает ', end='')
-
                 if event.from_user:
                     print(event.user_id)
                 elif event.from_group:
                     print('администратор группы', event.group_id)
-
             elif event.type == VkEventType.USER_TYPING_IN_CHAT:
                 print('Печатает ', event.user_id, 'в беседе', event.chat_id)
-
             elif event.type == VkEventType.USER_ONLINE:
                 print('Пользователь', event.user_id, 'онлайн', event.platform)
-
             elif event.type == VkEventType.USER_OFFLINE:
                 print('Пользователь', event.user_id, 'оффлайн', event.offline_type)
-
             else:
                 print(event.type, event.raw[1:])
 
