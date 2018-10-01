@@ -1,19 +1,21 @@
 import Database.Interaction as interact
 
-def list_to_sqlarray(lst, delete_quote = False):
+
+def list_to_sqlarray(lst, delete_quote=False):
     string = str(lst).replace('[', '').replace(']', '')
-    
+
     if delete_quote:
         string = string.replace("'", '')
     return string
-    
+
+
 class Table:
 
     def __init__(self, name):
         self.name = name
         self.columns = {}
 
-    def add_column(self, name = None, type = None):
+    def add_column(self, name=None, type=None):
 
         if type is None:
             assert 0, "Impossible define type column"
@@ -22,7 +24,8 @@ class Table:
 
         self.columns.update({name: type})
 
-        query = "ALTER TABLE {table_name} ADD {column_name} {column_type}".format(table_name=self.name, column_name=name, column_type=type)
+        query = "ALTER TABLE {table_name} ADD {column_name} {column_type}".format(table_name=self.name,
+                                                                                  column_name=name, column_type=type)
         return interact.execute(query)
 
     def clear_table(self):
@@ -30,12 +33,10 @@ class Table:
 
     def get_info_by_user_id(self, user_id):
         query = "SELECT * FROM {table} WHERE user_id like '{user_id}'".format(table=self.name, user_id=user_id)
-        print(query)
         return interact.execute(query)
 
     def get_info_by_time(self, time):
         query = "SELECT * FROM {table} WHERE time like '{time}'".format(table=self.name, time=time)
-        print(query)
         return interact.execute(query)
 
     def create_table(self, columns):
@@ -57,10 +58,32 @@ class Table:
             names.append(name)
             values.append(value)
 
-        query = "INSERT INTO {table_name} ({names}) VALUES({values})".format(table_name=self.name, names=list_to_sqlarray(names, True), values=list_to_sqlarray(values))
-        print(query)
+        query = "INSERT INTO {table_name} ({names}) VALUES({values})".format(table_name=self.name,
+                                                                             names=list_to_sqlarray(names, True),
+                                                                             values=list_to_sqlarray(values))
         return interact.execute(query)
 
     def select(self, names):
-        query = "SELECT {names} FROM {table}".format(names = list_to_sqlarray(names, True), table = self.name)
+        query = "SELECT {names} FROM {table}".format(names=list_to_sqlarray(names, True), table=self.name)
         return interact.execute(query)
+
+    def update_by_user_id(self, fields, user_id):
+        names = fields.keys()
+        query = "UPDATE {table_name} SET {changes} WHERE user_id like '{user_id}'"
+        changes = ''
+        i = 0
+        for name in names:
+            value = fields[name]
+            if value is None:
+                continue
+            if i > 0:
+                changes += ", {name} = '{value}'".format(name=name, value=value)
+            else:
+                changes += "{name} = '{value}'".format(name=name, value=value)
+            i += 1
+
+        query = query.format(table_name=self.name, user_id=user_id, changes=changes)
+        return interact.execute(query)
+
+
+Table('table').update_by_user_id(fields={'c1': 'qwe', 'c2': '3457'}, user_id='0001')
