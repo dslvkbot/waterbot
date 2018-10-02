@@ -40,7 +40,7 @@ class Table:
         return interact.execute(query)
 
     def create_table(self, columns):
-        interact.execute("CREATE TABLE {name} (CREATE_TABLE text)".format(name=self.name))
+        interact.execute("CREATE TABLE {name}".format(name=self.name))
         self.columns = columns
         for name in columns:
             type = columns[name]
@@ -64,7 +64,10 @@ class Table:
         return interact.execute(query)
 
     def select(self, names):
-        query = "SELECT {names} FROM {table}".format(names=list_to_sqlarray(names, True), table=self.name)
+        if len(names) == 0:
+            query = "SELECT {names} FROM {table}".format(names='*', table=self.name)
+        else:
+            query = "SELECT {names} FROM {table}".format(names=list_to_sqlarray(names, True), table=self.name)
         return interact.execute(query)
 
     def update_by_user_id(self, fields, user_id):
@@ -84,6 +87,3 @@ class Table:
 
         query = query.format(table_name=self.name, user_id=user_id, changes=changes)
         return interact.execute(query)
-
-
-Table('table').update_by_user_id(fields={'c1': 'qwe', 'c2': '3457'}, user_id='0001')
