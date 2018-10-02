@@ -29,17 +29,23 @@ class ReseteDatabase:
             orders = Table.Table('orders')
             clients = Table.Table('clients')
             orders.clear_table()
-            orders.create_table({
-                'user_id': 'text',
-                'count': 'text',
-                'room': 'text',
-                'time': 'text',
-                'type': 'text',
-            })
-            clients.create_table({
-                'user_id': 'text',
-                'room': 'text',
-            })
+            try:
+                orders.create_table({
+                    'user_id': 'text',
+                    'count': 'text',
+                    'room': 'text',
+                    'time': 'text',
+                    'type': 'text',
+                })
+            except:
+                pass
+            try:
+                clients.create_table({
+                    'user_id': 'text',
+                    'room': 'text',
+                })
+            except:
+                pass
             self.need_reset = False
         else:
             self.need_reset = True

@@ -6,6 +6,9 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 
 # token = '489aa25f9b01a64d7e8be333f9116a31c8c0ea1fd25868e6f90ea6e0c635d30d80b1a7647b9832f6f4894'
 
+# def add_order_to_archive(user_id, count):
+
+
 class VkBot:
     def __init__(self, token):
         self.vk_session = vk_api.VkApi(token=token)
@@ -109,6 +112,7 @@ class VkBot:
             self.write_msg(message.user_id,
                            'Заказ на ' + str(5 * order.count) + ' литров воды в комнату ' + order.room +
                            ' на ' + order.time + ' создан.\n' + message.text + '.')
+
             self.message_help(message)
 
     def message_delete_order(self, message):
@@ -165,7 +169,3 @@ class VkBot:
                 print('Пользователь', event.user_id, 'оффлайн', event.offline_type)
             else:
                 print(event.type, event.raw[1:])
-
-
-vk_bot = VkBot(token='489aa25f9b01a64d7e8be333f9116a31c8c0ea1fd25868e6f90ea6e0c635d30d80b1a7647b9832f6f4894')
-vk_bot.bot_processing()
