@@ -31,8 +31,8 @@ class Table:
     def clear_table(self):
         interact.execute("DELETE TABLE {name}".format(name=self.name))
 
-    def get_info_by_user_id(self, user_id):
-        query = "SELECT * FROM {table} WHERE user_id like '{user_id}'".format(table=self.name, user_id=user_id)
+    def get_info_by_user_id(self, user_id, names):
+        query = "SELECT {names} FROM {table} WHERE user_id like '{user_id}'".format(table=self.name, user_id=user_id, names=list_to_sqlarray(names, True))
         return interact.execute(query)
 
     def get_info_by_time(self, time):
@@ -40,7 +40,7 @@ class Table:
         return interact.execute(query)
 
     def create_table(self, columns):
-        interact.execute("CREATE TABLE {name}".format(name=self.name))
+        interact.execute("CREATE TABLE {name} (CREATE_TIME text)".format(name=self.name))
         self.columns = columns
         for name in columns:
             type = columns[name]

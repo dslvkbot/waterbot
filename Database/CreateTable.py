@@ -12,7 +12,6 @@ def create():
         })
     except:
         pass
-    orders.clear_table()
     try:
         orders.create_table({
             'user_id': 'text',
