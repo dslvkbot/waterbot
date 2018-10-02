@@ -1,3 +1,5 @@
+from sqlite3 import OperationalError
+
 import Database.Table as Table
 import datetime
 
@@ -8,11 +10,11 @@ def current_time():
 
 
 def time_in_seconds(timer):
-    assert len(timer) >= 3, "Unright format time " + str(timer)
+    assert len(timer) >= 3, "Wrong format time " + str(timer)
     return int(timer[0]) * 3600 + int(timer[1]) * 60 + int(timer[2])
 
 
-class ReseteDatabase:
+class ResetDatabase:
 
     def __init__(self, reset_time, radius=None):
         self.reset_time = time_in_seconds(reset_time)
@@ -27,7 +29,6 @@ class ReseteDatabase:
         current_seconds = time_in_seconds(current_time())
         if abs(current_seconds - self.reset_time) < self.radius:
             orders = Table.Table('orders')
-            clients = Table.Table('clients')
             orders.clear_table()
             try:
                 orders.create_table({
@@ -37,15 +38,8 @@ class ReseteDatabase:
                     'time': 'text',
                     'type': 'text',
                 })
-            except:
-                pass
-            try:
-                clients.create_table({
-                    'user_id': 'text',
-                    'room': 'text',
-                })
-            except:
-                pass
+            except OperationalError:
+                print('WARNING: Operational error while resetting OrderTable')
             self.need_reset = False
         else:
             self.need_reset = True

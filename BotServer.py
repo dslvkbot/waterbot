@@ -1,5 +1,7 @@
+from Database.Table import Table
 from GUIClasses import Order
 from KeyboardClasses import Button, KeyboardConstructor
+import datetime
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 
@@ -12,8 +14,10 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 class VkBot:
     def __init__(self, token):
         self.vk_session = vk_api.VkApi(token=token)
-        self.orders = dict()
-        self.clients = dict()
+        self.ordersdict = dict()
+        self.ordersdb = Table('orders')
+        self.clients = Table('clients')
+        self.archive = Table('archive')
 
     def write_msg(self, user_id, s):
         self.vk_session.method('messages.send', {'user_id': user_id, 'message': s})
@@ -62,23 +66,24 @@ class VkBot:
         self.write_keyboard(message.user_id, 'Выберите один из вариантов.', keyboard)
 
     def message_make_order(self, message):
-        if message.user_id in self.clients.keys():
+        if len(self.clients.get_info_by_user_id(message.user_id, ['room'])) != 0:
             self.message_to_enter_count(message)
         else:
             self.write_msg(message.user_id, 'Введите номер комнаты с корпусом.')
 
     def message_to_enter_count(self, message):
         self.write_msg(message.user_id, 'Введите количество бутылей по 5 литров.')
-        if message.user_id not in self.clients.keys():
-            self.clients.update({message.user_id: message.text})
+        if len(self.clients.get_info_by_user_id(message.user_id, ['room'])) == 0:
+            self.clients.insert_into({'user_id': message.user_id, 'room': message.text})
 
     def message_to_enter_time(self, message):
         global room
-        if message.user_id in self.clients.keys():
-            room = self.clients[message.user_id]
+        info = self.clients.get_info_by_user_id(message.user_id, ['room'])
+        if len(info) != 0:
+            room = info[0][0]
         new_order = Order.Order(room=room, count=int(message.text))
         if int(message.text) > 0:
-            self.orders.update({message.user_id: new_order})
+            self.ordersdict.update({message.user_id: new_order})
             button_18 = Button.Button('18:00', 'default')
             button_19 = Button.Button('19:00', 'default')
             button_20 = Button.Button('20:00', 'default')
@@ -93,10 +98,10 @@ class VkBot:
 
     def message_to_enter_type(self, message):
         global order_enter_type
-        if message.user_id in self.orders.keys():
-            order_enter_type = self.orders[message.user_id]
+        if message.user_id in self.ordersdict.keys():
+            order_enter_type = self.ordersdict[message.user_id]
         order_enter_type.change_time(message.text)
-        self.orders.update({message.user_id: order_enter_type})
+        self.ordersdict.update({message.user_id: order_enter_type})
         button_bank = Button.Button('Перевод на банковскую карту', 'positive')
         button_cash = Button.Button('Наличными', 'negative')
         button_list = [button_bank, button_cash]
@@ -105,37 +110,37 @@ class VkBot:
         self.write_keyboard(message.user_id, 'Выберите способ оплаты.', keyboard)
 
     def message_order_registered(self, message):
-        if message.user_id in self.orders.keys():
-            order = self.orders[message.user_id]
+        if message.user_id in self.ordersdict.keys():
+            order = self.ordersdict[message.user_id]
             order.change_type(message.text)
-            self.orders.update({message.user_id: order})
+            self.ordersdict.update({message.user_id: order})
+            self.ordersdb.insert_into({'user_id': message.user_id, 'room': order.room, 'count': str(order.count),
+                                       'time': order.time, 'type': order.type_of_payment})
+            self.ordersdict.pop(message.user_id)
+            now = datetime.datetime.now()
+            self.archive.insert_into(
+                {'user_id': message.user_id, 'count': str(order.count), 'date': now.strftime('%d-%m-%Y')})
             self.write_msg(message.user_id,
                            'Заказ на ' + str(5 * order.count) + ' литров воды в комнату ' + order.room +
                            ' на ' + order.time + ' создан.\n' + message.text + '.')
-
             self.message_help(message)
 
     def message_delete_order(self, message):
-        if message.user_id in self.orders.keys():
-            self.orders.pop(message.user_id)
-            self.write_msg(message.user_id, 'Заявка удалена.')
-        else:
-            self.write_msg(message.user_id, 'Заявка не найдена.')
+        self.ordersdb.delete_info_by_user_id(message.user_id)
+        self.write_msg(message.user_id, 'Заявки удалены.')
         self.message_help(message)
 
     def message_list_orders(self, message):
         if message.user_id == 21838346:
-            orderslist = self.orders.keys()
-            for key in orderslist:
-                try:
-                    thisorder = self.orders[key]
-                    self.write_msg(message.user_id,
-                                   'Заказ в комнату ' + thisorder.room + ' на ' + str(5 * thisorder.count)
-                                   + ' литров воды в ' + thisorder.time + '.\n' + thisorder.type_of_payment + '.')
-                except KeyError:
-                    print('Undefined behaviour')
-            if len(orderslist) == 0:
+            mes = self.ordersdb.select(['room', 'count', 'time', 'type'])
+            longmes = ''
+            for item in mes:
+                longmes += ('Заказ в комнату ' + item[0] + ' на ' + str(5 * int(item[1])) + ' литров воды в ' + item[2]
+                            + '. ' + item[3] + '.\n\n')
+            if len(mes) == 0:
                 self.write_msg(message.user_id, 'Список пуст.')
+            else:
+                self.write_msg(message.user_id, longmes)
             self.message_help(message)
 
     def bot_processing(self):

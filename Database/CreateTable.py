@@ -1,4 +1,7 @@
+from sqlite3 import OperationalError
+
 import Database.Table as Table
+
 
 def create():
     orders = Table.Table('orders')
@@ -6,12 +9,12 @@ def create():
     archive = Table.Table('archive')
     try:
         archive.create_table({
-            'used_id': 'text',
+            'user_id': 'text',
             'count': 'text',
             'date': 'text',
         })
-    except:
-        pass
+    except OperationalError:
+        print('WARNING: Operational error while creating ArchiveTable')
     try:
         orders.create_table({
             'user_id': 'text',
@@ -20,12 +23,12 @@ def create():
             'time': 'text',
             'type': 'text',
         })
-    except:
-        pass
+    except OperationalError:
+        print('WARNING: Operational error while creating OrderTable')
     try:
         clients.create_table({
             'user_id': 'text',
             'room': 'text',
         })
-    except:
-        pass
+    except OperationalError:
+        print('WARNING: Operational error while creating ClientsTable')

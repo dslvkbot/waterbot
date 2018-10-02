@@ -29,10 +29,11 @@ class Table:
         return interact.execute(query)
 
     def clear_table(self):
-        interact.execute("DELETE TABLE {name}".format(name=self.name))
+        interact.execute("DROP TABLE {name}".format(name=self.name))
 
     def get_info_by_user_id(self, user_id, names):
-        query = "SELECT {names} FROM {table} WHERE user_id like '{user_id}'".format(table=self.name, user_id=user_id, names=list_to_sqlarray(names, True))
+        query = "SELECT {names} FROM {table} WHERE user_id like '{user_id}'".format(table=self.name, user_id=user_id,
+                                                                                    names=list_to_sqlarray(names, True))
         return interact.execute(query)
 
     def get_info_by_time(self, time):
@@ -62,6 +63,10 @@ class Table:
                                                                              names=list_to_sqlarray(names, True),
                                                                              values=list_to_sqlarray(values))
         return interact.execute(query)
+
+    def delete_info_by_user_id(self, user_id):
+        query = "DELETE FROM {table} WHERE user_id like '{user_id}'".format(table=self.name, user_id=user_id)
+        interact.execute(query)
 
     def select(self, names):
         if len(names) == 0:
