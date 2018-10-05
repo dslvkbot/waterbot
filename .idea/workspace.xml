@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c202bad-92dd-48bf-8332-f084590b250f" name="Default Changelist" comment="fixed lot of bugs,">
-      <change afterPath="$PROJECT_DIR$/Server/BotStarter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/waterbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/waterbot.iml" afterDir="false" />
+    <list default="true" id="7c202bad-92dd-48bf-8332-f084590b250f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BotServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/CreateTable.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/CreateTable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/Interaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Interaction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/ResetTables.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/ResetTables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/Table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUIClasses/Client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/database.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/BotStarter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/BotStarter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/Server/database.sqlite" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,34 +17,35 @@
     <session id="62191281">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="31" />
+          <entry key="py" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="31" />
+          <entry key="Python" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="py" value="6559" />
-          <entry key="txt" value="49" />
+          <entry key="py" value="9277" />
+          <entry key="txt" value="144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="60" />
-          <entry key="Python" value="6559" />
+          <entry key="PLAIN_TEXT" value="155" />
+          <entry key="Python" value="9277" />
         </counts>
       </usages-collector>
     </session>
@@ -92,25 +84,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BotServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="121" column="106" lean-forward="true" selection-start-line="121" selection-start-column="106" selection-end-line="121" selection-end-column="106" />
+            <state relative-caret-position="462">
+              <caret line="213" column="56" lean-forward="true" selection-start-line="213" selection-start-column="56" selection-end-line="213" selection-end-column="56" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
-                <element signature="e#717#820#0" />
-                <element signature="e#872#1123#0" />
-                <element signature="e#1171#2161#0" />
-                <element signature="e#2208#2597#0" />
-                <element signature="e#2650#2867#0" />
-                <element signature="e#2924#3169#0" />
-                <element signature="e#3225#4164#0" />
-                <element signature="e#4220#4846#0" />
-                <element signature="e#5717#5864#0" />
-                <element signature="e#6043#6564#0" />
-                <element signature="e#6458#7928#0" />
+                <marker date="1538743579670" expanded="true" signature="898:1065" ph="..." />
+                <marker date="1538743579670" expanded="true" signature="3548:4101" ph="..." />
+                <marker date="1538743579670" expanded="true" signature="5194:5835" ph="..." />
+                <marker date="1538743579670" expanded="true" signature="5874:6248" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/longpoll.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="586" column="8" selection-start-line="586" selection-start-column="8" selection-end-line="586" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -127,7 +121,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Database/Table.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
+            <state relative-caret-position="952">
               <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
               <folding>
                 <element signature="e#381#835#0" />
@@ -140,7 +134,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Database/CreateTable.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="153">
               <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -149,14 +143,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Server/BotStarter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="289">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/vk_api.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="614" selection-start-line="614" selection-end-line="614" />
             </state>
           </provider>
         </entry>
@@ -174,6 +177,7 @@
     <findStrings>
       <find>get</find>
       <find>Заказ на</find>
+      <find>primiti</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,9 +197,10 @@
         <option value="$PROJECT_DIR$/Server/__init__.py" />
         <option value="$PROJECT_DIR$/Database/__init__.py" />
         <option value="$PROJECT_DIR$/Database/Table.py" />
-        <option value="$PROJECT_DIR$/BotServer.py" />
         <option value="$PROJECT_DIR$/Database/CreateTable.py" />
         <option value="$PROJECT_DIR$/Server/BotStarter.py" />
+        <option value="$PROJECT_DIR$/Server/botlongpoll.py" />
+        <option value="$PROJECT_DIR$/BotServer.py" />
       </list>
     </option>
   </component>
@@ -228,7 +233,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,6 +264,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,19 +368,32 @@
       <option name="project" value="LOCAL" />
       <updated>1538404928249</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed lot of bugs, changed token, added BotStarter, used Databases">
+      <created>1538499463898</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1538499463898</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added some functions">
+      <created>1538509583336</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1538509583336</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="7" />
-    <editor active="true" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952183" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49891067" visible="true" weight="0.25363827" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49891067" visible="true" weight="0.3108108" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49945533" weight="0.33783785" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -435,7 +453,9 @@
     </ignored-roots>
     <MESSAGE value="add waterbot" />
     <MESSAGE value="fix commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix commit" />
+    <MESSAGE value="fixed lot of bugs, changed token, added BotStarter, used Databases" />
+    <MESSAGE value="added some functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some functions" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../vkbot/game.py" />
@@ -458,9 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-          <folding>
-            <marker date="1538396624458" expanded="true" signature="12:17" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -483,9 +500,16 @@
     <entry file="file://$PROJECT_DIR$/Server/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Database/Interaction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Database/Table.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
+        <state relative-caret-position="952">
           <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
           <folding>
             <element signature="e#381#835#0" />
@@ -496,7 +520,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Database/CreateTable.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="153">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
@@ -504,40 +528,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/Interaction.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/requests/sessions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="-451">
+          <caret line="343" column="8" selection-start-line="343" selection-start-column="8" selection-end-line="343" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BotServer.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/vk_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="121" column="106" lean-forward="true" selection-start-line="121" selection-start-column="106" selection-end-line="121" selection-end-column="106" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <element signature="e#717#820#0" />
-            <element signature="e#872#1123#0" />
-            <element signature="e#1171#2161#0" />
-            <element signature="e#2208#2597#0" />
-            <element signature="e#2650#2867#0" />
-            <element signature="e#2924#3169#0" />
-            <element signature="e#3225#4164#0" />
-            <element signature="e#4220#4846#0" />
-            <element signature="e#5717#5864#0" />
-            <element signature="e#6043#6564#0" />
-            <element signature="e#6458#7928#0" />
-          </folding>
+        <state relative-caret-position="409">
+          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/botlongpoll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="503" selection-start-line="503" selection-end-line="503" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/requests_pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/BotStarter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/longpoll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="586" column="8" selection-start-line="586" selection-start-column="8" selection-end-line="586" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BotServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="213" column="56" lean-forward="true" selection-start-line="213" selection-start-column="56" selection-end-line="213" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1538743579670" expanded="true" signature="898:1065" ph="..." />
+            <marker date="1538743579670" expanded="true" signature="3548:4101" ph="..." />
+            <marker date="1538743579670" expanded="true" signature="5194:5835" ph="..." />
+            <marker date="1538743579670" expanded="true" signature="5874:6248" ph="..." />
           </folding>
         </state>
       </provider>

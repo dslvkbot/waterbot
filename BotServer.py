@@ -5,7 +5,6 @@ import datetime
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 
-
 # token = '489aa25f9b01a64d7e8be333f9116a31c8c0ea1fd25868e6f90ea6e0c635d30d80b1a7647b9832f6f4894'
 
 #
@@ -120,7 +119,7 @@ class VkBot:
             for item in order:
                 longmes += (str(i) + '. Заказ в комнату ' + item[0] + ' на ' + str(
                     5 * int(item[1])) + ' литров воды в ' + item[2]
-                            + '. ' + item[3] + ' ' + str(order.count * 85) + ' рублей.\n\n')
+                            + '. ' + item[3] + ' ' + str(int(item[1]) * 85) + ' рублей.\n\n')
                 i += 1
             self.write_msg(message.user_id, longmes)
         self.message_help(message)
@@ -150,19 +149,22 @@ class VkBot:
         if len(info) != 0:
             room = info[0][0]
         new_order = Order.Order(room=room, count=int(message.text))
-        if int(message.text) > 0:
-            self.ordersdict.update({message.user_id: new_order})
-            button_18 = Button.Button('18:00', 'default')
-            button_19 = Button.Button('19:00', 'default')
-            button_20 = Button.Button('20:00', 'default')
-            button_21 = Button.Button('21:00', 'default')
-            button_list = [button_18, button_19, button_20, button_21]
-            position = [2, 2]
-            keyboard = KeyboardConstructor.construct_keyboard(button_list, position)
-            self.write_keyboard(message.user_id, 'Выберите удобное время.', keyboard)
-        else:
-            self.write_msg(message.user_id, 'Введите положительное число.')
-            self.message_help(message)
+        try:
+            if int(message.text) > 0:
+                self.ordersdict.update({message.user_id: new_order})
+                button_18 = Button.Button('18:00', 'default')
+                button_19 = Button.Button('19:00', 'default')
+                button_20 = Button.Button('20:00', 'default')
+                button_21 = Button.Button('21:00', 'default')
+                button_list = [button_18, button_19, button_20, button_21]
+                position = [2, 2]
+                keyboard = KeyboardConstructor.construct_keyboard(button_list, position)
+                self.write_keyboard(message.user_id, 'Выберите удобное время.', keyboard)
+            else:
+                self.write_msg(message.user_id, 'Введите положительное число.')
+                self.message_help(message)
+        except:
+            pass
 
     def message_to_enter_type(self, message):
         global order_enter_type
@@ -214,32 +216,37 @@ class VkBot:
 
     def bot_processing(self):
         longpoll = VkLongPoll(self.vk_session)
-        for event in longpoll.listen():
-            if event.type == VkEventType.MESSAGE_NEW:
-                self.parse_message(event)
-                print('Новое сообщение:')
-                if event.from_me:
-                    print('От меня для: ', end='')
-                elif event.to_me:
-                    print('Для меня от: ', end='')
-                if event.from_user:
-                    print(event.user_id)
-                elif event.from_chat:
-                    print(event.user_id, 'в беседе', event.chat_id)
-                elif event.from_group:
-                    print('группы', event.group_id)
-                print('Текст: ', event.text)
-            elif event.type == VkEventType.USER_TYPING:
-                print('Печатает ', end='')
-                if event.from_user:
-                    print(event.user_id)
-                elif event.from_group:
-                    print('администратор группы', event.group_id)
-            elif event.type == VkEventType.USER_TYPING_IN_CHAT:
-                print('Печатает ', event.user_id, 'в беседе', event.chat_id)
-            elif event.type == VkEventType.USER_ONLINE:
-                print('Пользователь', event.user_id, 'онлайн', event.platform)
-            elif event.type == VkEventType.USER_OFFLINE:
-                print('Пользователь', event.user_id, 'оффлайн', event.offline_type)
-            else:
-                print(event.type, event.raw[1:])
+        while True:
+            try:
+                for event in longpoll.listen():
+                    if hasattr(event, 'type'):
+                        if event.type == VkEventType.MESSAGE_NEW:
+                            self.parse_message(event)
+                            print('Новое сообщение:')
+                            if event.from_me:
+                                print('От меня для: ', end='')
+                            elif event.to_me:
+                                print('Для меня от: ', end='')
+                            if event.from_user:
+                                print(event.user_id)
+                            elif event.from_chat:
+                                print(event.user_id, 'в беседе', event.chat_id)
+                            elif event.from_group:
+                                print('группы', event.group_id)
+                            print('Текст: ', event.text)
+                        elif event.type == VkEventType.USER_TYPING:
+                            print('Печатает ', end='')
+                            if event.from_user:
+                                print(event.user_id)
+                            elif event.from_group:
+                                print('администратор группы', event.group_id)
+                        elif event.type == VkEventType.USER_TYPING_IN_CHAT:
+                            print('Печатает ', event.user_id, 'в беседе', event.chat_id)
+                        elif event.type == VkEventType.USER_ONLINE:
+                            print('Пользователь', event.user_id, 'онлайн', event.platform)
+                        elif event.type == VkEventType.USER_OFFLINE:
+                            print('Пользователь', event.user_id, 'оффлайн', event.offline_type)
+                        else:
+                            print(event.type, event.raw[1:])
+            except AttributeError:
+                print('Voice Record\n\n\n')
