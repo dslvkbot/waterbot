@@ -3,8 +3,6 @@ from sqlite3 import OperationalError
 import Database.Table as Table
 import datetime
 
-days_in_seconds = 24 * 60 * 60
-
 
 def parse_date(string):
     fields = string.split('.')
