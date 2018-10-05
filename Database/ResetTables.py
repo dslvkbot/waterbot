@@ -1,5 +1,3 @@
-from sqlite3 import OperationalError
-
 import Database.Table as Table
 import datetime
 
