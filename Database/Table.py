@@ -1,5 +1,5 @@
 import Database.Interaction as interact
-
+import datetime
 
 def list_to_sqlarray(lst, delete_quote=False):
     string = str(lst).replace('[', '').replace(']', '')
@@ -29,7 +29,7 @@ class Table:
         return interact.execute(query)
 
     def clear_table(self):
-        interact.execute("DROP TABLE {name}".format(name=self.name))
+        return interact.execute("DROP TABLE {name}".format(name=self.name))
 
     def get_info_by_user_id(self, user_id, names):
         query = "SELECT {names} FROM {table} WHERE user_id like '{user_id}'".format(table=self.name, user_id=user_id,
@@ -66,7 +66,7 @@ class Table:
 
     def delete_info_by_user_id(self, user_id):
         query = "DELETE FROM {table} WHERE user_id like '{user_id}'".format(table=self.name, user_id=user_id)
-        interact.execute(query)
+        return interact.execute(query)
 
     def select(self, names):
         if len(names) == 0:

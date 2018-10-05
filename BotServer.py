@@ -114,8 +114,11 @@ class VkBot:
             order = self.ordersdict[message.user_id]
             order.change_type(message.text)
             self.ordersdict.update({message.user_id: order})
+            cur_date = datetime.datetime.today()
+            date = "{day}.{month}.{year}"
+            date = date.format(day=str(cur_date.day), month=str(cur_date.month), year=str(cur_date.year))
             self.ordersdb.insert_into({'user_id': message.user_id, 'room': order.room, 'count': str(order.count),
-                                       'time': order.time, 'type': order.type_of_payment})
+                                       'time': order.time, 'type': order.type_of_payment, 'date': date})
             self.ordersdict.pop(message.user_id)
             now = datetime.datetime.now()
             self.archive.insert_into(

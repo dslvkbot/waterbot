@@ -3,6 +3,19 @@ from sqlite3 import OperationalError
 import Database.Table as Table
 import datetime
 
+days_in_seconds = 24 * 60 * 60
+
+
+def parse_date(string):
+    fields = string.split('.')
+    assert len(fields) == 3, "Unright format date, need: dd.mm.yy"
+    return datetime.datetime(int(fields[2]), int(fields[1]), int(fields[0]))
+
+
+def current_date():
+    now = datetime.datetime.today()
+    return datetime.datetime(now.year, now.month, now.day)
+
 
 def current_time():
     date = datetime.datetime.now()
@@ -14,34 +27,33 @@ def time_in_seconds(timer):
     return int(timer[0]) * 3600 + int(timer[1]) * 60 + int(timer[2])
 
 
-class ResetDatabase:
+def need_delete_order(date):
+    date_order = parse_date(date)
+    if (current_date() - date_order).days > 3:
+        return True
+    return False
 
-    def __init__(self, reset_time, radius=None):
-        self.reset_time = time_in_seconds(reset_time)
-        if radius is None:
-            radius = 0
-        self.radius = max(radius, 20)
+
+def reset():
+    table_orders = Table.Table('orders')
+    records = table_orders.select(['user_id', 'date'])
+    for record in records:
+        if need_delete_order(record[1]):
+            table_orders.delete_info_by_user_id(record[0])
+
+
+class ReseterClass:
+
+    def __init__(self, radius=30):
+        if radius < 30:
+            radius = 30
+        self.radius = radius
         self.need_reset = True
 
     def reset(self):
-        if self.need_reset is False:
+        if not self.need_reset:
             pass
         current_seconds = time_in_seconds(current_time())
-        if abs(current_seconds - self.reset_time) < self.radius:
-            orders = Table.Table('orders')
-            orders.clear_table()
-            try:
-                orders.create_table({
-                    'user_id': 'text',
-                    'count': 'text',
-                    'room': 'text',
-                    'time': 'text',
-                    'type': 'text',
-                })
-            except OperationalError:
-                print('WARNING: Operational error while resetting OrderTable')
+        if abs(current_seconds - time_in_seconds([1, 0, 0])) < self.radius:
             self.need_reset = False
-        else:
-            self.need_reset = True
-        if current_seconds > self.reset_time:
-            self.need_reset = False
+            reset()

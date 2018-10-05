@@ -22,6 +22,7 @@ def create():
             'room': 'text',
             'time': 'text',
             'type': 'text',
+            'date': 'text',
         })
     except OperationalError:
         print('WARNING: Operational error while creating OrderTable')

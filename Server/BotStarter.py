@@ -9,8 +9,7 @@ def create_table():
 
 
 def reset_tables():
-    reseter = reseterClass.ResetDatabase(reset_time=[3, 0, 0], radius=30)
-    reseter.reset()
+    reseterClass.ReseterClass(30).reset()
 
 
 def bot_processing():
