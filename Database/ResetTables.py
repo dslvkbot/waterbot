@@ -47,9 +47,11 @@ class ReseterClass:
         self.need_reset = True
 
     def reset(self):
-        if not self.need_reset:
-            pass
         current_seconds = time_in_seconds(current_time())
+        if not self.need_reset:
+            if abs(current_seconds - time_in_seconds([1, 0, 0])) > self.radius:
+                self.need_reset = True
+            pass
         if abs(current_seconds - time_in_seconds([1, 0, 0])) < self.radius:
             self.need_reset = False
             reset()

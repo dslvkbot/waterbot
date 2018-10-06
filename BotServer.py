@@ -5,6 +5,7 @@ import datetime
 import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 
+
 # token = '489aa25f9b01a64d7e8be333f9116a31c8c0ea1fd25868e6f90ea6e0c635d30d80b1a7647b9832f6f4894'
 
 #
@@ -119,7 +120,7 @@ class VkBot:
             for item in order:
                 longmes += (str(i) + '. Заказ в комнату ' + item[0] + ' на ' + str(
                     5 * int(item[1])) + ' литров воды в ' + item[2]
-                            + '. ' + item[3] + ' ' + str(int(item[1]) * 85) + ' рублей.\n\n')
+                            + '. ' + item[3] + ' ' + str(int(item[1]) * 100) + ' рублей.\n\n')
                 i += 1
             self.write_msg(message.user_id, longmes)
         self.message_help(message)
@@ -193,7 +194,8 @@ class VkBot:
             self.add_order_to_archive(message.user_id, order.count)
             self.write_msg(message.user_id,
                            'Заказ на ' + str(5 * order.count) + ' литров воды в комнату ' + order.room +
-                           ' на ' + order.time + ' создан.\n' + message.text + ' ' + str(order.count * 85) + ' рублей.')
+                           ' на ' + order.time + ' создан.\n' + message.text + ' ' + str(
+                               order.count * 100) + ' рублей.')
             self.message_help(message)
 
     def message_delete_order(self, message):
@@ -209,7 +211,7 @@ class VkBot:
             for item in mes:
                 longmes += (str(i) + '. Заказ в комнату ' + item[0] + ' на ' + str(
                     5 * int(item[1])) + ' литров воды в ' + item[2]
-                            + '. ' + item[3] + ' ' + str(int(item[1]) * 85) + ' рублей.\n\n')
+                            + '. ' + item[3] + ' ' + str(int(item[1]) * 100) + ' рублей.\n\n')
                 i += 1
             if len(mes) == 0:
                 self.write_msg(message.user_id, 'Список пуст.')

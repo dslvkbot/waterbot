@@ -1,7 +1,7 @@
 import Database.ResetTables as reseterClass
 import BotServer as bs
 import Database.CreateTable as createClass
-import Database.Table as Table
+from threading import Thread
 
 
 def create_table():
@@ -17,6 +17,15 @@ def bot_processing():
     vk_bot.bot_processing()
 
 
+class ResetThread(Thread):
+    def __init__(self):
+        Thread.__init__(self)
+
+    def run(self):
+        reset_tables()
+
+
 create_table()
-reset_tables()
+rthread = ResetThread()
+rthread.start()
 bot_processing()

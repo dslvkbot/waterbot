@@ -1,22 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="7c202bad-92dd-48bf-8332-f084590b250f" name="Default Changelist" comment="fixed lot of bugs,">
+    <list default="true" id="7c202bad-92dd-48bf-8332-f084590b250f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/waterbot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/waterbot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/CreateTable.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/CreateTable.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Database/ResetTables.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/ResetTables.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/Table.py" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Table.py" afterDir="false" />
-=======
-    <list default="true" id="7c202bad-92dd-48bf-8332-f084590b250f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BotServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/BotServer.py" afterDir="false" />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
       <change beforePath="$PROJECT_DIR$/Server/BotStarter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/BotStarter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/Server/database.sqlite" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,109 +18,93 @@
     <session id="62191281">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="45" />
+          <entry key="py" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="45" />
+          <entry key="Python" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="11" />
-          <entry key="py" value="9277" />
-          <entry key="txt" value="144" />
+          <entry key="py" value="9496" />
+          <entry key="txt" value="160" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="155" />
-          <entry key="Python" value="9277" />
+          <entry key="PLAIN_TEXT" value="171" />
+          <entry key="Python" value="9496" />
         </counts>
       </usages-collector>
     </session>
     <session id="-1412698655">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.20" value="1" />
-          <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.24" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="19" />
+          <entry key="py" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="19" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="10" />
-          <entry key="py" value="3865" />
+          <entry key="py" value="2328" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="10" />
-          <entry key="Python" value="3865" />
+          <entry key="Python" value="2328" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/Server/BotStarter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-                <marker date="1538769111806" expanded="true" signature="251:254" ph="..." />
-=======
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BotServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="213" column="56" lean-forward="true" selection-start-line="213" selection-start-column="56" selection-end-line="213" selection-end-column="56" />
+            <state relative-caret-position="234">
+              <caret line="221" column="17" lean-forward="true" selection-start-line="221" selection-start-column="17" selection-end-line="221" selection-end-column="17" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
-                <marker date="1538743579670" expanded="true" signature="898:1065" ph="..." />
-                <marker date="1538743579670" expanded="true" signature="3548:4101" ph="..." />
-                <marker date="1538743579670" expanded="true" signature="5194:5835" ph="..." />
-                <marker date="1538743579670" expanded="true" signature="5874:6248" ph="..." />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
+                <marker date="1538813022009" expanded="true" signature="898:1065" ph="..." />
+                <marker date="1538813022009" expanded="true" signature="3548:4101" ph="..." />
+                <marker date="1538813022009" expanded="true" signature="5194:5835" ph="..." />
+                <marker date="1538813022009" expanded="true" signature="5874:6248" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-<<<<<<< HEAD
-        <entry file="file://$PROJECT_DIR$/BotServer.py">
-=======
         <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/longpoll.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
+            <state relative-caret-position="659">
               <caret line="586" column="8" selection-start-line="586" selection-start-column="8" selection-end-line="586" selection-end-column="8" />
             </state>
           </provider>
@@ -138,10 +112,21 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Database/Interaction.py">
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="122" selection-start-line="122" selection-end-line="122" />
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Database/Table.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="880">
+              <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+              <folding>
+                <marker date="1538813022021" expanded="true" signature="2583:2613" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -149,32 +134,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Database/CreateTable.py">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="384">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-=======
-            <state relative-caret-position="952">
-              <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
-              <folding>
-                <element signature="e#381#835#0" />
-                <marker date="1538498925699" expanded="true" signature="2436:2584" ph="..." />
-              </folding>
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Database/ResetTables.py">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="281">
-              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-                <marker date="1538769412802" expanded="true" signature="1125:1531" ph="..." />
-=======
-            <state relative-caret-position="153">
+            <state relative-caret-position="187">
               <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -183,24 +143,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/BotStarter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="493">
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/vk_api.py">
+        <entry file="file://$PROJECT_DIR$/Database/ResetTables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="614" selection-start-line="614" selection-end-line="614" />
+            <state relative-caret-position="510">
+              <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -218,12 +177,7 @@
     <findStrings>
       <find>get</find>
       <find>Заказ на</find>
-<<<<<<< HEAD
-      <find>orders</find>
-      <find>ordersdb</find>
-=======
       <find>primiti</find>
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -243,14 +197,11 @@
         <option value="$PROJECT_DIR$/Database/__init__.py" />
         <option value="$PROJECT_DIR$/Database/Table.py" />
         <option value="$PROJECT_DIR$/Database/CreateTable.py" />
-        <option value="$PROJECT_DIR$/BotServer.py" />
-        <option value="$PROJECT_DIR$/Server/BotStarter.py" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/Database/ResetTables.py" />
-=======
         <option value="$PROJECT_DIR$/Server/botlongpoll.py" />
         <option value="$PROJECT_DIR$/BotServer.py" />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
+        <option value="$PROJECT_DIR$/Server/ResetThread.py" />
+        <option value="$PROJECT_DIR$/Database/ResetTables.py" />
+        <option value="$PROJECT_DIR$/Server/BotStarter.py" />
       </list>
     </option>
   </component>
@@ -318,7 +269,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -326,6 +277,134 @@
       <recent name="C:\Users\agule\PycharmProjects\waterbot" />
       <recent name="C:\Users\agule\PycharmProjects\waterbot\Database" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/waterbot.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/BotServer.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/CreateTable.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/ResetTables.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/Table.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/__pycache__/CreateTable.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/__pycache__/Interaction.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/__pycache__/ResetTables.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/__pycache__/Table.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Database/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/GUIClasses/__pycache__/Order.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/GUIClasses/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/KeyboardClasses/__pycache__/Button.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/KeyboardClasses/__pycache__/KeyboardConstructor.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/KeyboardClasses/__pycache__/__init__.cpython-36.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Server/BotStarter.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/__pycache__/BotServer.cpython-36.pyc</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -339,7 +418,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ResetTables">
+  <component name="RunManager" selected="Python.BotStarter">
     <configuration name="BotServer" type="PythonConfigurationType" factoryName="Python" singleton="true" temporary="true">
       <module name="waterbot" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -382,35 +461,12 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ResetTables" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="waterbot" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Database" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Database/ResetTables.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.BotServer" />
       <item itemvalue="Python.BotStarter" />
-      <item itemvalue="Python.ResetTables" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ResetTables" />
         <item itemvalue="Python.BotStarter" />
         <item itemvalue="Python.BotServer" />
       </list>
@@ -455,31 +511,31 @@
       <option name="project" value="LOCAL" />
       <updated>1538509583336</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Release 1.0">
+      <created>1538761568333</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1538761568333</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-=======
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24972677" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32952183" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49891067" weight="0.25189188" />
-=======
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49891067" visible="true" weight="0.3108108" />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49891067" weight="0.3108108" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49945533" weight="0.33783785" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49945533" weight="0.26195425" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49945533" visible="true" weight="0.26091477" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32952183" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50108933" side_tool="true" weight="0.25363827" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -488,26 +544,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24972677" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32952183" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49891067" visible="true" weight="0.25189188" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49945533" weight="0.33783785" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49945533" weight="0.26195425" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32952183" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50108933" side_tool="true" weight="0.25363827" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info active="true" anchor="bottom" id="SVN Repositories" order="11" weight="0.32952183" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -556,45 +592,29 @@
     <MESSAGE value="fix commit" />
     <MESSAGE value="fixed lot of bugs, changed token, added BotStarter, used Databases" />
     <MESSAGE value="added some functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some functions" />
+    <MESSAGE value="Release 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Release 1.0" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../vkbot/game.py" />
+    <entry file="file://$PROJECT_DIR$/KeyboardClasses/KeyboardConstructor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KeyboardClasses/Button.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GUIClasses/Client.py" />
-    <entry file="file://$PROJECT_DIR$/GUIClasses/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/Interaction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/Table.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="448">
-          <caret line="67" column="89" selection-start-line="67" selection-start-column="89" selection-end-line="67" selection-end-column="89" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-=======
-        <state relative-caret-position="85">
-          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/GUIClasses/Order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
+        <state relative-caret-position="85">
           <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
         </state>
       </provider>
@@ -602,86 +622,23 @@
     <entry file="file://$PROJECT_DIR$/KeyboardClasses/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/KeyboardClasses/Button.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/GUIClasses/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/KeyboardClasses/KeyboardConstructor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-=======
-    <entry file="file://$PROJECT_DIR$/Database/Interaction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Database/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/Table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
-          <folding>
-            <element signature="e#381#835#0" />
-            <marker date="1538498925699" expanded="true" signature="2436:2584" ph="..." />
-          </folding>
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Server/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/ResetTables.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="281">
-          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-=======
-        <state relative-caret-position="153">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <marker date="1538769412802" expanded="true" signature="1125:1531" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/Database/CreateTable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-=======
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/requests/sessions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-451">
           <caret line="343" column="8" selection-start-line="343" selection-start-column="8" selection-end-line="343" selection-end-column="8" />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/vk_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="315">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-=======
-        <state relative-caret-position="409">
-          <caret line="614" selection-start-line="614" selection-end-line="614" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/botlongpoll.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="503" selection-start-line="503" selection-end-line="503" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/botlongpoll.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/requests_pool.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -693,43 +650,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/BotStarter.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/vk_api.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="192">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-=======
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
->>>>>>> b3c558d462f3c96d3b2f2245bd1672a59c89bc46
+        <state relative-caret-position="268">
+          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/CreateTable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <marker date="1538769111806" expanded="true" signature="251:254" ph="..." />
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/Table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+          <folding>
+            <marker date="1538813022021" expanded="true" signature="2583:2613" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/Interaction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/vk_api/longpoll.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
+        <state relative-caret-position="659">
           <caret line="586" column="8" selection-start-line="586" selection-start-column="8" selection-end-line="586" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BotServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="213" column="56" lean-forward="true" selection-start-line="213" selection-start-column="56" selection-end-line="213" selection-end-column="56" />
+        <state relative-caret-position="234">
+          <caret line="221" column="17" lean-forward="true" selection-start-line="221" selection-start-column="17" selection-end-line="221" selection-end-column="17" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <marker date="1538743579670" expanded="true" signature="898:1065" ph="..." />
-            <marker date="1538743579670" expanded="true" signature="3548:4101" ph="..." />
-            <marker date="1538743579670" expanded="true" signature="5194:5835" ph="..." />
-            <marker date="1538743579670" expanded="true" signature="5874:6248" ph="..." />
+            <marker date="1538813022009" expanded="true" signature="898:1065" ph="..." />
+            <marker date="1538813022009" expanded="true" signature="3548:4101" ph="..." />
+            <marker date="1538813022009" expanded="true" signature="5194:5835" ph="..." />
+            <marker date="1538813022009" expanded="true" signature="5874:6248" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/ResetThread.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/ResetTables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/BotStarter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
